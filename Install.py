@@ -20,9 +20,9 @@ except Exception:
 def get_username():
     return pwd.getpwuid(os.getuid())[0]
 
-requirement = "testrequirements.txt" # the real requiremet file is too long so I use this one for testing 
+requirement = "requirements.txt" # the real requiremet file is too long so I use testrequirement.txt for testing 
 user        = get_username()
-parent_dir  = "/home/"+user+"/playground"
+parent_dir  = "/home/"+user
 config      = ".config"
 build       = ".build"
 local       = ".local"
