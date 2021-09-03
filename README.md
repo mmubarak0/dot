@@ -6,7 +6,6 @@ A beautiful Dot configrations for the <a href="https://github.com/i3/i3">i3</a> 
 ## Table of Contents
 * [Installation](#installation)
 * [ScreenShots](#screenshots)
-* [License](#license)
 
 ### Installation
 If you are using **Ubuntu** or it's derivatives, you can install this configration
@@ -18,11 +17,6 @@ using `python3 Install.py`.
 ![2021-09-03_19-03](https://user-images.githubusercontent.com/66879926/132042352-a4ffb3cf-b25d-4e13-a336-f7af45419c90.png)
 ![2021-09-03_19-04](https://user-images.githubusercontent.com/66879926/132042355-a328247c-3038-4e43-86cc-b0aa445b4b48.png)
 
-
-
-## License
-
-this is licensed under the GNU license.
 
 
 
