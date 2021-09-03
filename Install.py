@@ -405,3 +405,4 @@ except Exception:
 
             """)
 os.system('sleep 3')
+os.system('i3 restart')
