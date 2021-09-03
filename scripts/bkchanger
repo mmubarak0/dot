@@ -1,10 +1,10 @@
 #!/usr/bin/env fish
 
-
+# you can edit this file in ~/.local/bin/ folder 
 #	echo "$Directory/$Name"
+set Directory "/home/$USER/Pictures"
 while true
-	set Directory "/home/ki2kid/Downloads/Photos"
-	set Name (ls -1 -b -R ~/Downloads/Photos/|grep -i -e ".png" -e ".jpg" -e ".jpeg"|sort --random-sort|head -1)  
+	set Name (ls -1 -b -R ~/Pictures/|grep -i -e ".png" -e ".jpg" -e ".jpeg"|sort --random-sort|head -1)  
 	sleep 60
 	nitrogen --set-scaled $Directory/$Name 
 end
