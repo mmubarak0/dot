@@ -1,0 +1,14 @@
+## Those are all in ~/.config folder 
+i3/ mpd/ polybar/ rofi/ fish/ omf/
+## background changer is in ~/.local/bin
+bkchanger
+## vim plugins 
+.vim/ 
+## Icons are in ~/.local/share
+icons/ 
+## .icons folder are in home directory
+.icons/
+
+## some package need more steps
+Xrequirement.txt
+

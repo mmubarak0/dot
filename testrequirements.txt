@@ -1,0 +1,6 @@
+i3
+vim
+ranger
+htop
+neofetch
+openssh-server

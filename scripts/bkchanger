@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+
+
+#	echo "$Directory/$Name"
+while true
+	set Directory "/home/ki2kid/Downloads/Photos"
+	set Name (ls -1 -b -R ~/Downloads/Photos/|grep -i -e ".png" -e ".jpg" -e ".jpeg"|sort --random-sort|head -1)  
+	sleep 60
+	nitrogen --set-scaled $Directory/$Name 
+end

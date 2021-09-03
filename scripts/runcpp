@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+
+import sys
+import os
+from datetime import datetime
+import subprocess
+import time
+from termcolor import colored
+import platform
+
+
+pat = platform.system()
+noon = sys.argv
+if len(noon) == 1:
+    print("no program was specfied search for programs ....")
+    # TODO show file ended with .cpp 
+    fileName = []
+    for filename in os.listdir():
+        if filename.endswith('.cpp'):
+            fileName.append(filename)
+    print(f"""we found {len(fileName)} file/s""")
+    if len(fileName) != 0:
+        for i in range(len(fileName)):
+            print(f"[{i+1}] "+fileName[i])
+
+        # TODO assosiate every program with number 
+
+
+        try:
+            inpt = int(input(colored("(Default[1])choose program by number:", "green", "on_blue")+" "))
+        except Exception:
+            inpt = 1
+            print("no program was specified use the default one")
+        x = 0
+        for i in range(len(fileName)):
+            if (i+1) == inpt:
+                # do
+                progname = fileName[i]
+                x = "io"
+                break
+        if x != "io":
+            try:
+                progname = fileName[0]
+            except Exception:
+                progname = ""
+                print("Error: This Folder dosen't contain any cpp file")
+        progName = progname[:-4]
+    else:
+        progName = ""
+        progname = ""
+    # output
+    # print(f"progname = {progname}.py "+f"// progName = {progName}")
+else:
+    progname = noon[1]
+    progName = progname[:-4]
+# TODO run selected program 
+start = time.time()
+startTime = datetime.now()
+# //
+print("\n"*3)
+subprocess.run(["g++", "-o", progName, progname])
+try:
+    if progName != "":
+        subprocess.run([f"./{progName}"])
+except Exception:
+    if progName != "":
+        if pat != "Linux":
+            print("""are you using windows? \n\n""")
+            subprocess.run([f"{progName}.exe"])
+        else:
+            pass
+    
+try:
+    if progName != "":
+        for j in os.listdir():
+            if j[:-4] == progName:
+                subprocess.run(["rm", progName])
+except Exception:
+    if progName != "":
+        if pat != "Linux":
+            for j in os.listdir():
+                if j[:-4] == progName:
+                    subprocess.run(["del", f"{progName}.exe"])
+print("\n"*3)
+# TODO enter the time takes the program to be compiled
+# print("////////////////------------------///////////")
+print(colored(('It took {0:0.1f} seconds'.format(time.time() - start)), "yellow"))
+# print("////////////////------------------///////////")
+# print("\t\t",datetime.now() - startTime)

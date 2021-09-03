@@ -1,0 +1,9 @@
+mono-complete
+golang
+nodejs
+default-jdk
+npm
+build-essential
+cmake
+vim-nox
+python3-dev
