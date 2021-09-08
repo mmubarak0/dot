@@ -4,17 +4,15 @@ import os
 import pwd
 import sys
 
-try:
-    os.system('figlet -f cosmic "START " | lolcat')
-except Exception:
-    print("""
+
+print("""
      .::::::.:::::::::::::::.    :::::::.. ::::::::::::
     ;;;`    `;;;;;;;;'''';;`;;   ;;;;``;;;;;;;;;;;;''''
     '[==/[[[[,    [[    ,[[ '[[,  [[[,/[[['     [[
       '''    $    $$   c$$$cc$$$c $$$$$$c       $$
      88b    dP    88,   888   888,888b "88bo,   88,
       "YMmMY"     MMM   YMM   ""` MMMM   "W"    MMM
-    """)
+""")
 
 
 def get_username():
@@ -119,10 +117,8 @@ print("the following package will not be installed type\
    the full name to package you want to add seperated by spaces or just pass")
 print(miss)
 addmiss = input("What do you wanna add : ")
-try:
-    os.system('figlet -f NScript "wait ..." | lolcat')
-except Exception:
-    print("""
+
+print("""
                                                                 
                                         I8                      
                                         I8                      
@@ -134,7 +130,7 @@ except Exception:
   ,d8,  ,d8,  ,8I  ,d8,   ,d8b,_,88,_ ,d88b,      d8b  d8b  d8b 
   P""Y88P""Y88P"   P"Y8888P"`Y88P""Y888P""Y88     Y8P  Y8P  Y8P 
                                                               
-          """)
+""")
 # installing the package
 c = ' '.join(map(str, install))
 print('sudo apt install %s %s' %(c, addmiss))
@@ -270,7 +266,8 @@ for i in indx:
 for i in appendx:
 	if i not in indx:
 		print('cp -R %s %s' %((os.path.join(config_directory, i)), backup_dir))
-        os.system('cp -R %s %s' %((os.path.join(config_directory, i)), backup_dir))
+		os.system('cp -R %s %s' %((os.path.join(config_directory, i)), backup_dir))
+
 print(" Backups Done ☯  ☻  ☯ ")
 os.system('sleep 10')
 
@@ -379,10 +376,7 @@ print("  ")
 
 
 
-try:
-    os.system('figlet -f NScript "END" | lolcat')
-except Exception:
-    print("""
+print("""
 
          ***** **         ***** *     **          ***** **
       ******  **** *   ******  **    **** *    ******  ***
@@ -403,6 +397,6 @@ except Exception:
      **               **                     **
 
 
-            """)
+""")
 os.system('sleep 3')
 os.system('i3 restart')
